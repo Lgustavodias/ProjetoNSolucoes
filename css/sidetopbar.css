@@ -1,10 +1,3 @@
- /* Estilos gerais */
- body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-
   /* Estilos para a barra superior */
   .top-bar {
     background-color: #333;
@@ -46,7 +39,7 @@
   .sidebar {
     background-color: #444;
     color: white;
-    width: 250px;
+    width: 170px; /* Ajuste o valor para tornar a sidebar mais estreita */
     height: 100vh;
     position: fixed;
     top: 0;
@@ -92,16 +85,7 @@
     left: 0;
     z-index: 2;
   }
- /* Estilos para o footer */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-}
-
-/* Estilos para o layout da página */
+ /* Estilos para o layout da página */
 html, body {
   height: 100%;
   margin: 0;
@@ -115,10 +99,14 @@ html, body {
 
 .page-content {
   flex: 1;
+  padding: 20px; /* Adicione um espaçamento interno para o conteúdo */
 }
 
-/* Estilos para garantir o Sticky Footer */
-.page-wrapper::before {
-  content: "";
-  flex: 1;
+/* Estilos para o footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
 }

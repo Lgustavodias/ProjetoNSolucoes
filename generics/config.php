@@ -61,9 +61,9 @@ try {
 
   if ($row) {
     $id_usuario = $row["id"];
-    $nome = $row["nome"];
+    $nome_usuario = $row["nome"];
     $login = $row["email"];
-    $nivel = $row["nivel"];
+    $nivel_usuario = $row["nivel"];
   } else {
     session_destroy();
     header('Location: ../home/login.php?erro=USUARIO OU SENHA INCORRETOS!');

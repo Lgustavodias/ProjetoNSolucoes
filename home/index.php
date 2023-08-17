@@ -19,7 +19,7 @@ require_once("../generics/config.php");
     ?>
     <div class="content">
     <div align="center">
-        <?php echo "<b style=\"color:black;\">Bem vindo(a) $nome!</b>" ?>
+        <?php echo "<b style=\"color:black;\">Bem vindo(a) $nome_usuario!</b>" ?>
     </div>
     </div>
     <div class="page-wrapper">
