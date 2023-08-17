@@ -7,6 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       header('Content-Type: application/json');
       echo json_encode(array('success' => $success, 'message' => $message));
    }
+
+   // Defina o limite de tamanho em bytes (5MB)
+   $limiteTamanho = 5 * 1024 * 1024;
+
    $nome = $_POST["nome"];
    $valor = $_POST["valor"];
    $tamanho = $_POST["tamanho"];
@@ -21,7 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       "pdf"
    );
    $fileUpload = new FileUpload($destino, $tiposPermitidos);
+
    try {
+      // Verificar o tamanho do arquivo antes de mover
+      if ($_FILES['foto']['size'] > $limiteTamanho) {
+         sendJsonResponse(false, 'Tamanho do arquivo excede o limite de 5MB.');
+         exit;
+      }
+
       $foto = $fileUpload->moveFile($_FILES['foto']);
 
       $query = $pdo->prepare("INSERT INTO `produtos` (`nome`, `valor`, `tamanho`, `peso`, `foto`) VALUES (?,?,?,?,?);");
@@ -37,3 +48,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       sendJsonResponse(false, 'Tipo de arquivo inválido. Somente imagens JPEG, PNG e PDF são permitidas. Detalhes: ' . $e->getMessage());
    }
 }
+?>

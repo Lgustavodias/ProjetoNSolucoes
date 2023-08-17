@@ -113,7 +113,7 @@ require_once "../generics/config.php";
                     success: function(response) {
                         $("#form-messages").html('<div class="' + (response.success ? 'success' : 'error') + '">' + response.message + '</div>');
                         if (response.success) {
-                            window.location.href = '../home/index.php'; // Substitua pelo caminho correto
+                            window.location.href = '../home/cadastro_produto.php'; // Substitua pelo caminho correto
                         }
                     },
                     error: function(response) {
