@@ -1,0 +1,102 @@
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background-color: black; /* Fundo roxo apenas para o conteúdo do modal */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    color:white;
+  }
+
+  /* Estilos para o botão de fechar */
+  #closeModalButton {
+    margin-top: 10px;
+    background-color:red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  /* Estilos para o botão Enviar */
+  #submitButton {
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  #openModalButton {
+    background-color: blue; /* Botão azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 9999;
+  }
+  /* Estilos para a tabela */
+.table {
+  max-width: 400px; /* Defina o tamanho máximo da tabela */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para a paginação */
+.dataTables_wrapper .dataTables_paginate {
+  margin-top: 10px;
+  text-align: center; /* Centraliza os botões de paginação */
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  display: inline-block;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #e0e0e0;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+  background-color: #f2f2f2;
+  color: #999;
+  cursor: default;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+}

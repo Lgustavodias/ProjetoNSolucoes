@@ -1,0 +1,124 @@
+ /* Estilos gerais */
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Estilos para a barra superior */
+  .top-bar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .top-bar-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top-bar-logo img {
+    vertical-align: middle;
+    max-height: 40px; /* Ajuste o tamanho máximo do logo */
+    margin-right: 10px;
+  }
+
+  .top-bar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .top-bar-link {
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+  }
+
+  /* Estilos para a barra lateral */
+  .sidebar {
+    background-color: #444;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s;
+    padding-top: 60px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin: 10px 0;
+  }
+
+  .sidebar-link {
+    width: 100%;
+    display: block;
+    color:white;
+    padding: 20px;
+    text-align: left; /* Para alinhar o texto à esquerda */
+    box-sizing: border-box; /* Para incluir padding na largura total */
+    transition: background-color 0.3s; /* Efeito de transição para hover */
+  }
+
+  .sidebar-link:hover {
+    background-color: red; /* Ou a cor que você desejar quando o mouse passar por cima */
+  }
+
+  /* Estilo para o botão de mostrar/ocultar a barra lateral */
+  .toggle-sidebar-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 2;
+  }
+ /* Estilos para o footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Estilos para o layout da página */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+}
+
+/* Estilos para garantir o Sticky Footer */
+.page-wrapper::before {
+  content: "";
+  flex: 1;
+}
